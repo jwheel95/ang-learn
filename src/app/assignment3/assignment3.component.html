@@ -3,7 +3,7 @@
   <p *ngIf="btnClicked">This is my content</p>
   <p 
     *ngFor="let click of clicks"
-    [ngStyle]="{backgroundColor: getBgColor()}"
-    [ngClass]="{'over-five': clicks.length >= 5}">
-    {{ clicks }}</p>
+    [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'white'}"
+    [ngClass]="{'over-five': click >= 5}">
+    {{ click }}</p>
 </div>
