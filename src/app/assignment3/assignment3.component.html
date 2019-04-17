@@ -1,0 +1,9 @@
+<div class="container">
+  <button class="btn btn-primary" (click)="onBtnClick()">Display Details</button>
+  <p *ngIf="btnClicked">This is my content</p>
+  <p 
+    *ngFor="let click of clicks"
+    [ngStyle]="{backgroundColor: getBgColor()}"
+    [ngClass]="{'over-five': clicks.length >= 5}">
+    {{ clicks }}</p>
+</div>
