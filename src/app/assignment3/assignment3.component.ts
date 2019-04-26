@@ -16,13 +16,8 @@ export class Assignment3Component implements OnInit {
   }
 
   onBtnClick() {
-    this.btnClicked = true;
+    this.btnClicked = !this.btnClicked;
     this.n++;
     this.clicks.push(this.n);
   }
-
-  getBgColor() {
-    return this.n >= 5 ? 'blue' : 'white';
-  }
-
 }
